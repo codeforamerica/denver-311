@@ -1,3 +1,27 @@
-name: Denver 311 Indicators
-markdown: redcarpet
-pygments: true
+# Site settings
+title: Denver 311 Indicators
+timestamp: March 2014
+email: your-email@domain.com
+description: "A look at 311 calls in the City and County of Denver."
+baseurl: ""
+url: "http://yourdomain.com"
+share: "Share this."
+
+about:
+  label: "Last updated"
+  description: "A quick look at 311 calls in the City and County of Denver."
+
+# Footer settings
+footer:
+  image: "images/flag_tag.svg"
+  alt: "Code for America"
+  link: "http://codeforamerica.org/"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Custom collections
+collections:
+- big_numbers
+- graphs

@@ -1,93 +1,20 @@
 ---
 layout: default
-title: {{ site.name }}
 ---
 
 <!-- About ================================================== -->
-<a id="about" name="about"></a>
-<div class="section-block">
-  <div class="jumbotron">
-    <div class="row">
-      <div class="col-sm-10">                     
-        <h1>{{ site.name }}</h1>
-        <p class="lead">This is a dynamic infographic that visualizes important information about the 311 service in the City and County of Denver. Each chart below attempts to help answer important questions using data about cases in the 311 system. The information presented here is a representation of Open Data provided by the City and County of Denver.</p>
-        <p class="small">Last updated March 2014</p>
-      </div>
-    </div>
-  </div>
+<span class="anchor" id="about"></span>
+<div class="jumbotron">
+  <h1>{{ site.title }}</h1>
+  <p class="lead">{{ site.about.description }}</p>
+  <p class="small">{{ site.about.label }}: {{ site.timestamp }}</p>
 </div> <!-- About -->
 
-<!-- Case Locations ========================================= -->
-<a id="locations" name="locations"></a>
-<div class="section-block"> 
-  <h1>Locations</h1>
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>Cases by Zip Code</h2>
-      <p><strong>Where are cases coming in from and what are the biggest issues for those areas?</strong> This map reflects the percentage of all cases coming from each zip code. Hover or click on a section of the map to see the most frequent case topics from that zip code. Select a year to see the same data from previous years.</p>
+<div class="infographic clearfix">
+  {% for post in site.posts %}
+    <span class="anchor" id="{{post.section}}"></span>
+    <div class="info-group">
+      {% include section.html %}
     </div>
-  </div>
-</div> <!-- Locations -->
-
-
-<!-- Case Sources ==========================================  -->
-<a id="sources" name="sources"></a>
-<div class="section-block">
-  <h1>Sources</h1>
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>Cases by Source</h2>
-      <p><strong>Where are cases coming in from?</strong> The chart below shows where cases are coming from. The other category includes cases from email, agencies, fax, 3rd parties, mail, surveys, the mayor’s office, conversations, city council members, police reqeusts, and iPhone.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>Source Efficiency</h2>
-      <p><strong>How long does it take to close cases by source?</strong> This chart shows the average time it takes for a case to be closed by channel. This could be useful in determining where there needs to be improved efficiency. </p>
-    </div>
-  </div>
-</div> <!-- Sources -->
-
-<!-- Case Topics ==========================================  -->
-<a id="topics" name="topics"></a>
-<div class="section-block">
-  <h1>Topics</h1>
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>Topic distribution</h2>
-      <p><strong>How long does it take for cases from each source to be closed?</strong> Each point below represents a case topic, plotted by how long it takes to respond and how many cases exist for it. Dots in the top right are topics that take a long time to answer and come in often. Cases in the bottom right take a short time to answer but still come in often.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>Topics over time</h2>
-      <p><strong>How have top issues changed over time?</strong> These topics are for cases that take a long time to close and are created often.  You can check this to see if there has been a significant change year to year. These topics are ranked by [the number of cases] * [average time it takes to close the case].</p>
-    </div>
-  </div>
-</div> <!-- Topics -->
-
-<!-- Case Types ==========================================  -->
-<a id="types" name="types"></a>
-<div class="section-block">
-  <h1>Types</h1>
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>Cases by Type</h2>
-      <p><strong>What are constituents requesting?</strong> The following is a breakdown of the types of reqeusts that come into 311. Information requests are X. Complaint requests are Y. Service reqeusts are Z. Proactively reaching out to the community and heading off information requests will likely reduce the number of calls into 311.</p>
-    </div>
-  </div>
-</div> <!-- Types -->
-
-<!-- Case Times ==========================================  -->
-<a id="times" name="times"></a>
-<div class="section-block">
-  <h1>Times</h1>
-  <div class="row">
-    <div class="col-sm-12">
-      <h2>Cases by Time</h2>
-      <p><strong>What time of day do people submit cases?</strong> Below is a breakdown of the number of cases that come in from various channels throughout the week. The darker areas represent more cases, the lighter areas represent fewer cases. Use the buttons below to choose which source the cases come from.</p>
-    </div>
-  </div>
-</div> <!-- Times -->
+  {% endfor %}
+</div>

@@ -1,0 +1,194 @@
+---
+---
+/* These lines are necessary for jekyll to recognize a sass file
+    http://jekyllrb.com/docs/assets/
+*/
+
+/* Theme Colors */
+$primary-color: #C44176;
+$secondary-color: #D2769B;
+$tertiary-color: #923961;
+$text-color: white;
+$light-background-text-color: #555;
+
+/* Theme Fonts */
+$font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* Master Styles */
+a { color: $text-color; }
+
+a:hover {color: $text-color;}
+.main-content {
+  position: relative;
+  padding-top: 80px;
+}
+
+body {
+  color: white;
+  background-color: $primary-color;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jumbotron {
+  background-color: $primary-color;
+  text-align: left;
+}
+
+.row {margin-bottom: 50px;}
+
+/* Infographic */
+.infographic {
+  border: 1px solid $tertiary-color;
+  margin-bottom: 80px;
+
+}
+
+/* Sections */
+.info-header {
+  background-color: $secondary-color;
+  padding: 20px 40px 20px 40px;
+}
+
+.info-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+.info-date {
+  font-size: 1em;
+  padding-left:  20px;
+}
+.info-data {
+  float: right;
+  text-align: right;
+  padding-top: 13px;
+}
+.info-row {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-around;
+  align-items:center;
+  flex-wrap: wrap;
+}
+
+.info-half {
+  max-width: 50%;
+  padding: 40px;
+  text-align: center;
+  min-width:370px;
+}
+
+.info-full {
+  max-width: 100%;
+  padding: 40px;
+  border-top: 1px solid $secondary-color;
+}
+
+.info-description {padding-top: 20px;}
+
+/* Navigation */
+.main-nav {
+  background: $primary-color;
+  height: 60px;
+  z-index: 150;
+  margin-bottom: -60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 10px;
+}
+
+.nav-shadow {
+  -webkit-box-shadow: 0 -4px 0px 4px $primary-color,0 2px 4px 0 rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 -4px 0px 4px $primary-color,0 2px 4px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 -4px 0px 4px $primary-color,0 2px 4px 0 rgba(0,0,0,0.1);
+}
+
+.nav-links {
+  font-size: 1em;
+  text-align: center;
+  padding-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-links > a {
+  padding: 30px;
+}
+
+.anchor{
+  display: block;
+  height: 80px; /*same height as header*/
+  margin-top: -80px; /*same height as header*/
+  visibility: hidden;
+}
+
+/* BIGTEXT STYLES */
+.bigtext {
+    font-family: Helvetica, Arial;
+    font-weight: 700;
+    text-align: center;
+}
+
+.bigtext > span {
+    line-height: 0.95em;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: $text-color;
+  color: $light-background-text-color;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height:100%;
+  clear:both;
+}
+
+footer a {
+  color: $light-background-text-color;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: $primary-color;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+
+/* Show and affix the side nav when space allows it */
+@media(max-width:767px){
+  .info-date, .info-data {display:none;}
+  .info-header {text-align: center;}
+  .infographic {border: none;}
+  .main-content {padding:0;}
+  .btn-mj {margin-top:1em;}
+  footer {
+    padding-top: 2em;
+  }
+  .main-nav {display: none;}
+}
+@media(min-width:768px){}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .fb, .fb:hover,
+  .twitter, .twitter:hover,
+  .gplus, .gplus:hover {
+    /* Reference the @2x Sprite */
+    background-image: url('../images/mj_share-2x.png');
+    /* Translate the @2x sprite's dimensions back to 1x */
+    background-size: 32px 198px;
+  }
+}
