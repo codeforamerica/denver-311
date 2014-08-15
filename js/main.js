@@ -11,6 +11,9 @@ function populateBigNumber(id) {
     if(error){
       console.log(error);
     }
+    else if(data.length == 0) {
+      console.log("No big number");
+    }
     else {
 	   $("#" + id + "-number").text(data[0].big);
     }

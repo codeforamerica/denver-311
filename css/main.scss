@@ -10,6 +10,8 @@ $secondary-color: #D2769B;
 $tertiary-color: #923961;
 $text-color: white;
 $light-background-text-color: #555;
+$filter-color: #999999;
+$filter-color-active: #923961;
 
 /* Theme Fonts */
 $font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -32,6 +34,21 @@ img.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.filterButton {
+  background-color: $filter-color;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  &.active {
+    background-color: $filter-color-active;
+  }
+  &:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+  }
 }
 
 .jumbotron {
