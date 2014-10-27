@@ -52,8 +52,6 @@ A simple visual overview of 311 data from the City and County of Denver. This pr
 
 ### Installation, Usage
 
-This is the repo for the Denver 311 Data Visualization.
-
 * [Code][code]
 * [Staging][staging]
 
@@ -104,8 +102,3 @@ Issues and feature backlog are tracked through [GitHub issues][ghissues].
 See the [LICENSE][] for details.
 
 [license]: https://github.com/codeforamerica/denver-311/blob/master/LICENSE
-
-
-
-
-
